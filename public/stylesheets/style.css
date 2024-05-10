@@ -42,7 +42,7 @@ a:focus {
 }
 
 .login-btn {
-  width: 97%;
+  width: 90%;
   padding: .4rem;
   font-weight: 700;
   background-color: rgb(1, 183, 255);
@@ -75,7 +75,7 @@ a:focus {
   text-align: center;
   border: 1px solid rgba(128, 128, 128, 0.3);
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .get-app {
