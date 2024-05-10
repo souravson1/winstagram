@@ -1,5 +1,7 @@
+require('dotenv').config()
 var createError = require('http-errors');
 var express = require('express');
+const connectDB = require('./config/db.js');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -10,6 +12,8 @@ var usersRouter = require('./routes/users');
 const passport = require('passport');
 
 var app = express();
+
+connectDB();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
