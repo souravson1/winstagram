@@ -349,16 +349,18 @@
         </svg>
       </div>
     </div>
-    <div class="my-2 font-medium text-sm"><%= post.likes.length %> likes</div>
-    <div class="flex space-x-2 text-sm">
-      <a
-        href="https://www.instagram.com/millionairesformula/"
-        class="font-medium"
-        ><%= post.user.username %></a
-      >
-      <p><%= post.caption %></p>
-    </div>
-    <div class="text-sm text-gray-400 py-2 cursor-pointer">
+    <div class="mt-2 font-medium text-sm"><%= post.likes.length %> likes</div>
+    <% if (post.caption) { %>
+      <div class="flex space-x-2 text-sm">
+        <a
+          href="#"
+          class="font-medium"
+          ><%= post.user.username %></a
+        >
+        <p><%= post.caption %></p>
+      </div>
+    <% } %>
+    <div class="text-sm text-gray-400 cursor-pointer">
       View all 13 comments
     </div>
   </section>
