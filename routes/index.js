@@ -53,6 +53,12 @@ router.get('/upload', isLoggedIn, function (req, res) {
   res.render('upload', { footer: true });
 });
 
+router.get('/search/:user', isLoggedIn, async function (req, res) {
+  const user = new RegExp(`^${req.params.user}`);
+  const users = await userModel.find({username: {$regex: user}})
+  res.json(users);
+});
+
 router.post('/register', (req, res, next) => {
   const userData = new userModel({
     username: req.body.username,
